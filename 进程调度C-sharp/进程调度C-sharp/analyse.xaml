@@ -1,0 +1,18 @@
+﻿<Window x:Class="进程调度C_sharp.analyse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="分析结果" Height="300" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <ScrollViewer>
+            <DataGrid x:Name="Table" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="进程名" Binding="{Binding Name}" ElementStyle="{StaticResource cellstyle}" Width="70" />
+                    <DataGridTextColumn Header="周转时间" Binding="{Binding ZzTime}" ElementStyle="{StaticResource cellstyle}" Width="70"/>
+                    <DataGridTextColumn Header="带权周转时间" Binding="{Binding DqzzTime}" ElementStyle="{StaticResource cellstyle}" Width="*" />
+                    <DataGridTextColumn Header="平均周转时间" Binding="{Binding AzzTime}" ElementStyle="{StaticResource cellstyle}" Width="*" />
+                    <DataGridTextColumn Header="带权平均周转时间" Binding="{Binding AdqzzTime}" ElementStyle="{StaticResource cellstyle}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</Window>
